@@ -69,6 +69,15 @@ def OR(x1, x2):
     return 1
 
 
+def XOR(x1, x2):
+    '''
+    XOR gate
+    '''
+    s1 = NAND(x1, x2)
+    s2 = OR(x1, x2)
+    return AND(s1, s2)
+
+
 if __name__ == '__main__':
   # print(AND(0, 0))
   # print(AND(1, 0))
